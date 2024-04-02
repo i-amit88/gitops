@@ -66,7 +66,7 @@ def return_files_key():
 @app.route('/return-files-data/')
 def return_files_data():
   try:
-    return send_file('./Output.txt',attachment_filename='Output.txt',as_attachment=True)
+    return send_file('./Output.txt',as_attachment=True,attachment_filename='Output.txt')
   except Exception as e:
     return str(e)
 
